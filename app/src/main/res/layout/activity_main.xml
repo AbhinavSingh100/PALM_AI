@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/main_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="272dp"
+                android:layout_height="102dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="100dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:elevation="20dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/palm_ai_nobg" />
+
+            <EditText
+                android:id="@+id/requestText"
+                android:layout_width="371dp"
+                android:layout_height="151dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="48dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="Write a short poem on planes."
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/generateBtn"
+                style="@style/button_style"
+                android:layout_width="154dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="56dp"
+                android:backgroundTint="#45F58B"
+                android:foregroundGravity="fill_horizontal|fill_vertical"
+                android:text="GENERATE" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/progress_bar_style" />
+
+            <TextView
+                android:id="@+id/responseText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/white"
+                android:hint="Your answer here"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/copyText"
+                style="@style/button_style"
+                android:layout_marginTop="20dp"
+                android:text=" Copy Text" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/palm_green"
+                app:srcCompat="@android:drawable/ic_btn_speak_now" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
